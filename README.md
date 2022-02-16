@@ -1,9 +1,14 @@
-# mpv-copyTime
-Copy the current time of the video to clipboard.
+# mpv-copy-time
+Copy the current time of the video to clipboard or to file.
 
-Get the current time of the video and copy it to the clipboard with the format HH:MM:SS.MS, where MS (milliseconds) is 3 digits.
+- Get the current time of the video and copy it to the clipboard with the format HH:MM:SS.MS, where MS (milliseconds) is 3 digits.
 
-By default, the script is bound to "Ctrl + c"
+- Get the current time of the video and copy it to `file.txt` with the format HH:MM:SS.
+
+
+By default:
+- Copy to clipboard is bound to "Ctrl + c"
+- Copy to file is bound to "Ctrl + a"
 
 External commands are used to access the clipboard:
 - `Powershell` is used on Windows
