@@ -86,5 +86,23 @@ local function copy_time()
     end
 end
 
+local function copy_time_to_file()
+    local file_name = "file.txt"
+    local time_pos = mp.get_property_number("time-pos")
+    local minutes, remainder = divmod(time_pos, 60)
+    local hours, minutes = divmod(minutes, 60)
+    local seconds = math.floor(remainder)
+    local time = string.format("%02d:%02d:%02d", hours, minutes, seconds)
+
+    mp.osd_message(string.format("Copied to %s", file_name))
+
+    local file = io.open(file_name, "a")
+    file:write(time .. "\n")
+    file:close()
+
+    mp.osd_message(string.format("Copied to %s: %s", file_name, time))
+end
+
 mp.add_key_binding("Ctrl+c", "copy_time", copy_time)
+mp.add_key_binding("Ctrl+a", "copy_time_to_file", copy_time_to_file)
 
