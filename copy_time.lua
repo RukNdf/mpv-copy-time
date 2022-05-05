@@ -87,7 +87,8 @@ local function copy_time()
 end
 
 local function copy_time_to_file()
-    local file_name = "file.txt"
+    -- local file_name = "file.txt"
+	local file_name = string.format("%s%s.txt", mp.get_property("path"), mp.get_property("filename"))
     local time_pos = mp.get_property_number("time-pos")
     local minutes, remainder = divmod(time_pos, 60)
     local hours, minutes = divmod(minutes, 60)
