@@ -3,7 +3,7 @@ Copy the current time of the video to clipboard or to file.
 
 - Get the current time of the video and copy it to the clipboard with the format HH:MM:SS.MS, where MS (milliseconds) is 3 digits.
 
-- Get the current time of the video and copy it to `file.txt` with the format HH:MM:SS.
+- Get the current time of the video and copy it to `[video name].txt` with the format HH:MM:SS.
 
 
 By default:
